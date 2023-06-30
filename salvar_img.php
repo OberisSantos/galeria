@@ -23,15 +23,15 @@
 
             // Gera um nome único para a imagem
             $nome_imagem = md5(uniqid(time())) . "." . $ext[1];
-            var_dump($nome_imagem);
+         
 
             // Caminho de onde ficará a imagem
             $path = "imagem/";
-            $permissao = 777;
+            $permissao = 0755;
             //verificar se a pasta existe
             if(!is_dir($path)){
                 //criar a pasta e dar permissao de escrita, gravação e execucao
-                mkdir($path, $permissao);
+                mkdir($path, $permissao, true);
             }
             // Caminho de onde ficará a imagem alterado
             $path = $path . $nome_imagem;
