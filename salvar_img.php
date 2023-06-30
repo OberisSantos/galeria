@@ -33,6 +33,7 @@
                 //criar a pasta e dar permissao de escrita, gravação e execucao
                 mkdir($path, $permissao, true);
             }
+            
             // Caminho de onde ficará a imagem alterado
             $path = $path . $nome_imagem;
 
